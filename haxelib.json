@@ -1,0 +1,14 @@
+{
+  "name": "why-serialize",
+  "license": "MIT",
+  "tags": [
+    "serialization"
+  ],
+  "classPath": "src",
+  "contributors": [
+    "kevinresol"
+  ],
+  "releasenote": "initial release",
+  "version": "0.0.0",
+  "dependencies": {}
+}
