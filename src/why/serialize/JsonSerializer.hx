@@ -13,7 +13,7 @@ using tink.MacroApi;
 
 class JsonSerializer {
 	public static function build() {
-		return BuildCache.getType('why.serialize.JsonSerializer', (ctx:BuildContext) -> {
+		return BuildCache.getType('why.serialize.JsonSerializer', function(ctx:BuildContext) {
 			var name = ctx.name;
 			var ct = ctx.type.toComplex();
 			var def = macro class $name implements why.Serializer<$ct, String> {
@@ -24,7 +24,7 @@ class JsonSerializer {
 					return tink.Json.parse((v:$ct));
 			}
 			def.pack = ['why', 'serialize'];
-			def;
+			return def;
 		});
 	}
 }
